@@ -128,6 +128,7 @@ namespace iothook
                 i++;
                 values[i].Visible = true;
                 valueslabel[i].Visible = true;
+                SendKeys.Send("{TAB}");
 
 
             }
@@ -213,11 +214,12 @@ namespace iothook
 
                     dynamic stuff = JObject.Parse(s);
                     reader.Close();
+                    webRequest.Abort();
 
                     grafik++;
                     if (stuff.value_1 != null)
                     {
-                        chart1.Series[0].Points.AddXY(grafik, Convert.ToDouble(stuff.value_1));
+                        chart1.Series[0].Points.AddXY(grafik,Convert.ToDouble(stuff.value_1));
                         chart1.Series[0].LegendText = stuff.element_1;
                         chart1.Series[0].Enabled = true;
                     }
@@ -244,7 +246,7 @@ namespace iothook
                     }
                     if (stuff.value_5 != null)
                     {
-                        chart1.Series[4].Points.AddXY(grafik++, Convert.ToDouble(stuff.value_5));
+                        chart1.Series[4].Points.AddXY(grafik, Convert.ToDouble(stuff.value_5));
                         chart1.Series[4].LegendText = stuff.element_5;
                         chart1.Series[4].Enabled = true;
                     }
@@ -293,8 +295,8 @@ namespace iothook
 
                 timer1.Stop();
                 verilerial.Text = "Veri Al";
-                MessageBox.Show("Kullanıcı adı , şifreniz yanlış veya bağlantınızda sorun olabilir" + e);
-                
+                Thread.Sleep(1000);
+                MessageBox.Show("Kullanıcı adı , şifreniz yanlış veya bağlantınızda sorun olabilir" + e);                
                 channelnumber.ReadOnly = false;
 
 
@@ -371,8 +373,7 @@ namespace iothook
                     webRequest.SendChunked = true;
                  
                     using (var streamWriter = new StreamWriter(webRequest.GetRequestStream()))
-                    {
-                        MessageBox.Show("burada");
+                    {                        
                         var json = new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(new
                         {
                             api_key = apikey.Text,
@@ -389,12 +390,14 @@ namespace iothook
                         MessageBox.Show("Değerler başarılı bir şekilde yüklendi.");
                         streamWriter.Flush();
                         streamWriter.Close();
+                        webRequest.Abort();
 
                     }
                 }
                 catch (Exception)
                 {
                     MessageBox.Show("kullanıcı adı , şifre , api key yanlış veya bağlantınızda sorun olabilir.");
+                    timer1.Stop();
                 }
 
             }

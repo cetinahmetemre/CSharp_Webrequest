@@ -347,7 +347,7 @@
             this.v1.Name = "v1";
             this.v1.Size = new System.Drawing.Size(75, 23);
             this.v1.TabIndex = 15;
-            this.v1.Text = "123";
+            this.v1.Text = "0";
             this.v1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.degergirildi);
             this.v1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rakamgirisi);
             // 
@@ -567,7 +567,6 @@
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.kulsifre);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "Form1";
             this.Text = "Iothook";
             this.Load += new System.EventHandler(this.Form1_Load);

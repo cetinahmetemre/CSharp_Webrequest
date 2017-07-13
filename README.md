@@ -1,2 +1,2 @@
 
-C# ile IoThook IoT dashboard a veri gönderme.
+C# ile IoThook IoT dashboarda veri gönderme ve çekme.

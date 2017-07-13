@@ -77,6 +77,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.deneme = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.gonder.SuspendLayout();
             this.al.SuspendLayout();
@@ -556,11 +557,21 @@
             // 
             this.deneme.Interval = 10000;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(248, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "label2";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(896, 712);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.kuladi);
@@ -628,6 +639,7 @@
         private MetroFramework.Controls.MetroTile grafikkaydet;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Timer deneme;
+        private System.Windows.Forms.Label label2;
     }
 }
 

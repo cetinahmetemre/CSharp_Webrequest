@@ -5,9 +5,6 @@ D:\SoftwareProject\C#\iothook\iothook\obj\Debug\iothook.Properties.Resources.res
 D:\SoftwareProject\C#\iothook\iothook\obj\Debug\iothook.csproj.GenerateResource.Cache
 D:\SoftwareProject\C#\iothook\iothook\bin\Debug\iothook.exe
 D:\SoftwareProject\C#\iothook\iothook\bin\Debug\iothook.pdb
-D:\SoftwareProject\C#\iothook\iothook\bin\Debug\MetroFramework.Design.dll
-D:\SoftwareProject\C#\iothook\iothook\bin\Debug\MetroFramework.dll
-D:\SoftwareProject\C#\iothook\iothook\bin\Debug\MetroFramework.Fonts.dll
 D:\SoftwareProject\C#\iothook\iothook\obj\Debug\iothook.exe
 D:\SoftwareProject\C#\iothook\iothook\obj\Debug\iothook.pdb
 D:\SoftwareProject\C#\iothook\iothook\bin\Debug\Newtonsoft.Json.dll

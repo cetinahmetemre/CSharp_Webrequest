@@ -208,6 +208,7 @@ namespace iothook
                 {
 
                     string s = reader.ReadToEnd();
+                    
 
                     s = s.Trim('[');
                     s = s.Trim(']');
@@ -296,7 +297,7 @@ namespace iothook
                 timer1.Stop();
                 verilerial.Text = "Veri Al";
                 Thread.Sleep(1000);
-                MessageBox.Show("Kullanıcı adı , şifreniz yanlış veya bağlantınızda sorun olabilir" + e);                
+                MessageBox.Show("Kullanıcı adı , şifreniz yanlış veya bağlantınızda sorun olabilir");                
                 channelnumber.ReadOnly = false;
 
 
@@ -386,7 +387,8 @@ namespace iothook
                         });
                        
                         streamWriter.Write(json);
-                        
+
+                        Console.Write(json);
                         MessageBox.Show("Değerler başarılı bir şekilde yüklendi.");
                         streamWriter.Flush();
                         streamWriter.Close();
